@@ -29,4 +29,13 @@ export class HeroDetailComponent {
   goBack(): void {
     this.location.back();
   }
+  save(): void {
+    if(this.hero){
+      this.heroService.updateHero(this.hero)
+      // Why is the empty funciton call () put inside the subscribe functions???
+      .subscribe(()=> this.goBack());
+    }
+  }
+
+
 }
