@@ -1,3 +1,4 @@
+import { MessageService } from './../message.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./messages.component.less']
 })
 export class MessagesComponent {
-
+  constructor(public messageService: MessageService) {}
 }
